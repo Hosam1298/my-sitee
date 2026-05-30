@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+حكايتنا ❤️
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="hearts"
+id="hearts">
+</div>
+
+<div class="container">
+
+<!-- المقدمة -->
+
+<div class="card"
+style="text-align:center">
+
+<h1>
+📖 حكايتنا
+</h1>
+
+<p>
+
+مو كل الحكايات تُكتب بالحبر…  
+بعضها تُكتب بالقلب ❤️
+
+</p>
+
+</div>
+
+<!-- Timeline -->
+
+<div class="card">
+
+<h2>
+
+🌷 رحلة مشاعرنا
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h2>
+🌸 البداية
+</h2>
+
+<p>
+
+3 / 11 / 2025  
+بداية تعارف حلوة بس مو الافضل…  
+وبداية قصة تحمل شعور مختلف ❤️
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h2>
+🥀 مرحلة صعبة
+</h2>
+
+<p>
+
+26 / 12 / 2025  
+مو كل الطرق تكون سهلة…  
+لكن بعض القلوب تبقى متعلقة رغم كل شيء ✨
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h2>
+🤍 الرجعة
+</h2>
+
+<p>
+
+23 / 2 / 2026  
+رجعة القلب للقلب…  
+وبداية أجمل وانقى واحلى علاقة من جديد 💖
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- عداد -->
+
+<div class="card"
+style="text-align:center">
+
+<h2>
+
+⏳ عداد أيامنا
+
+</h2>
+
+<p
+class="counter"
+id="daysCounter">
+
+جارِ الحساب...
+
+</p>
+
+</div>
+
+<!-- Navigation -->
+
+<div class="card"
+style="text-align:center">
+
+<h2>
+🌸 صفحات أخرى
+</h2>
+
+<button
+class="btn"
+onclick="goPage('home.html')">
+
+🏠 الرئيسية
+
+</button>
+
+<br><br>
+
+<button
+class="btn"
+onclick="goPage('surprise.html')">
+
+🎁 المفاجآت
+
+</button>
+
+<br><br>
+
+<button
+class="btn"
+onclick="goPage('dua.html')">
+
+🤲 دعاء العيد
+
+</button>
+
+</div>
+
+<!-- اقتباس -->
+
+<div class="card"
+style="text-align:center">
+
+<h2>
+🌹
+</h2>
+
+<p>
+
+بعض القصص ما تحتاج نهاية مثالية…  
+يكفي أنها كانت صادقة ❤️
+
+</p>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+
+✨ من بداية التعارف…  
+إلى أجمل الذكريات ❤️ ✨
+
+</div>
+
+</div>
+
+<script
+src="script.js">
+</script>
+
+<script>
+
+const startDate =
+new Date("2025-11-03");
+
+const today =
+new Date();
+
+const diff =
+today - startDate;
+
+const days =
+Math.floor(
+diff /
+(1000*60*60*24)
+);
+
+document
+.getElementById(
+"daysCounter"
+)
+.innerHTML =
+
+"❤️ صار على تعارفنا " +
+days +
+" يوم ❤️";
+
+</script>
+
+</body>
+</html>

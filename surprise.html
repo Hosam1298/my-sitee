@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+المفاجآت 🎁
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="hearts"
+id="hearts">
+</div>
+
+<div class="container">
+
+<div class="card"
+style="text-align:center">
+
+<h1>
+🎁 مفاجآت خاصة إلج
+</h1>
+
+<p>
+
+اختاري مفاجأة…
+فكل وحدة تحمل شعور مختلف ❤️
+
+</p>
+
+<br>
+
+<button
+class="btn"
+onclick="surprise1()">
+
+💌 رسالة حب
+
+</button>
+
+<br><br>
+
+<button
+class="btn"
+onclick="surprise2()">
+
+🌹 قلوب وورود
+
+</button>
+
+<br><br>
+
+<button
+class="btn"
+onclick="surprise3()">
+
+🔐 رسالة سرية
+
+</button>
+
+<br><br>
+
+<button
+class="btn"
+onclick="goPage('home.html')">
+
+🏠 الرئيسية
+
+</button>
+
+</div>
+
+<!-- popup -->
+
+<div
+id="popup"
+class="popup hidden">
+
+<div
+class="card"
+style="
+max-width:700px;
+text-align:center;
+">
+
+<div
+id="popupText">
+</div>
+
+<br>
+
+<button
+class="btn"
+onclick="closePopup()">
+
+إغلاق
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+
+✨ لأن بعض المشاعر تستحق أن تُحفظ للأبد… ❤️ ✨
+
+</div>
+
+</div>
+
+<script
+src="script.js">
+</script>
+
+<script>
+
+// 1
+
+function surprise1(){
+
+showPopup(
+
+`<h2>💌 رسالة حب</h2>
+
+<p>
+
+رحمة…
+مو كل يوم الواحد يلگي شخص يغيّر حياته مثل ما إنتِ غيرتي حياتي. من يوم ما دخلتيها، صار كلشي أهدى، أدفى، وأجمل.
+إنتِ مو مجرد شخص أحبّه، إنتِ صرتي جزء من تفكيري، من يومي، من أحلامي اللي صارت كلها تدور عليج. كل ضحكة منج تخليني أنسى تعبي كله، وكل غيابج يخليني أشتاگ حتى لأبسط تفاصيلج.
+أحبج مو لأنج كاملة، بس لأنج إنتِ… بكل عفويتج، بكل كلامج، بكل شي فيج. ومعاج حسّيت إنو الحياة إلها معنى مختلف، معنى أحلى.
+إذا الدنيا كلها اختارت طريق، أني أختارج إنتِ بكل مرة
+</p>`
+
+);
+
+}
+
+// 2
+
+function surprise2(){
+
+showPopup(
+
+`<h2>🌹 لحظة خاصة</h2>
+
+<p>
+
+قلوب وورود إلج وحدج ❤️
+
+</p>`
+
+);
+
+let count=0;
+
+let rain=setInterval(()=>{
+
+let rose=
+document.createElement("div");
+
+rose.innerHTML=
+["🌹","💖","✨"]
+[Math.floor(
+Math.random()*3
+)];
+
+rose.style.position=
+"fixed";
+
+rose.style.left=
+Math.random()*100+
+"vw";
+
+rose.style.top=
+"-50px";
+
+rose.style.fontSize=
+(25+
+Math.random()*20)
++"px";
+
+rose.style.zIndex=
+9999;
+
+rose.style.animation=
+"fly 4s linear forwards";
+
+document.body
+.appendChild(rose);
+
+setTimeout(()=>{
+rose.remove();
+},4000);
+
+count++;
+
+if(count>35){
+
+clearInterval(rain);
+
+setTimeout(()=>{
+
+showPopup(
+
+`<h2>🌹</h2>
+
+<p>
+
+إنتِ وردة بقلبي ما تذبل…  
+ونبضة ما تهدأ…  
+وأجمل صدفة صارت بحياتي 🌹💖
+
+</p>`
+
+);
+
+},2500);
+
+}
+
+},150);
+
+}
+
+// 3
+
+function surprise3(){
+
+showPopup(
+
+`<h2>🔐 رسالة سرية</h2>
+
+<p>
+
+إنتِ أعظم إنسانة بحياتي ❤️
+
+أني كلش أعشقج…
+وردة روحي ودنيتي كلها 🌷
+
+وإذا سألوني شنو أجمل شعور عرفته…  
+أگول وجودج ✨
+
+بعض الناس نحبهم…  
+وبعضهم يصيرون جزء من روحنا…  
+وأنتِ جنتِ ثنينهم 💖
+
+</p>`
+
+);
+
+}
+
+</script>
+
+</body>
+</html>
